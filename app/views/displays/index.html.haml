@@ -1,0 +1,17 @@
+
+%table{:border => 0}
+  %theader
+    %tr
+      %th Name:
+      %th Address:
+      %th Phone Number:
+      %th Yelp Rating:
+      %th Web Address:
+    %tbody
+    - @results.businesses.each do |business|
+      %tr
+        %td= business.name
+        %td= business.address
+        %td= business.display_phone
+        %td= business.rating
+        %td= business.url
